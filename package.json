@@ -1,0 +1,40 @@
+{
+  "name": "reportemail",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build/server.js",
+  "scripts": {
+    "dev": "vite",
+    "read": "node ./src/read-report.js",
+    "sequelize": "node_modules/.bin/sequelize",
+    "migrate": "npm run sequelize db:migrate",
+    "seed": "npm run sequelize db:seed:all",
+    "build": "vite build --outDir build --ssr src/server.ts",
+    "format": "prettier --config .prettierrc \"src/**/*.{js,json,ts,css,scss,vue,html,md}\" --write",
+    "start": "pnpm run build && node build/server.js",
+    "test": "vitest run",
+    "test:ui": "vitest --ui",
+    "coverage": "vitest --coverage"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "big-json": "^3.2.0",
+    "env-schema": "^5.2.1",
+    "fastify": "^4.27.0",
+    "pino": "^9.1.0",
+    "pino-pretty": "^11.1.0",
+    "sendmail": "^1.6.1",
+    "sequelize": "^6.37.3",
+    "sqlite3": "^5.1.7",
+    "umzug": "^3.8.0"
+  },
+  "devDependencies": {
+    "@vitest/coverage-c8": "^0.33.0",
+    "@vitest/ui": "^1.6.0",
+    "sequelize-cli": "^6.6.2",
+    "vite": "^5.2.11",
+    "vite-plugin-node": "^3.1.0",
+    "vitest": "^1.6.0"
+  }
+}
