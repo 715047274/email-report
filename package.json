@@ -19,9 +19,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@fastify/autoload": "^5.9.0",
     "big-json": "^3.2.0",
     "env-schema": "^5.2.1",
     "fastify": "^4.27.0",
+    "fastify-plugin": "^4.5.1",
     "pino": "^9.1.0",
     "pino-pretty": "^11.1.0",
     "sendmail": "^1.6.1",
