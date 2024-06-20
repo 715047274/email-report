@@ -20,6 +20,7 @@
   "license": "ISC",
   "dependencies": {
     "@fastify/autoload": "^5.9.0",
+    "asciichart": "^1.5.25",
     "big-json": "^3.2.0",
     "env-schema": "^5.2.1",
     "fastify": "^4.27.0",
