@@ -29,7 +29,8 @@
     "pino-pretty": "^11.1.0",
     "sendmail": "^1.6.1",
     "sequelize": "^6.37.3",
-    "umzug": "^3.8.1"
+    "umzug": "^3.8.1",
+    "vite-plugin-commonjs": "^0.10.1"
   },
   "devDependencies": {
     "@vitest/coverage-c8": "^0.33.0",

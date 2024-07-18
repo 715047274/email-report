@@ -2,6 +2,7 @@
 import { defineConfig } from 'vite'
 import { VitePluginNode } from 'vite-plugin-node'
 import * as path from 'path'
+import commonjs from 'vite-plugin-commonjs'
 
 export default defineConfig({
     server: {
@@ -9,6 +10,7 @@ export default defineConfig({
         port: 3000
     },
     plugins: [
+        commonjs(/* options */),
         ...VitePluginNode({
             // Nodejs native Request adapter
             // currently this plugin support 'express', 'nest', 'koa' and 'fastify' out of box,

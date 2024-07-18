@@ -7,7 +7,9 @@ const application = app({
     pluginTimeout: 50000,
     bodyLimit: 15485760
 })
-
+// application.ready().then(() => {
+//     application.log.info('App is ready')
+// })
 if (import.meta.env.PROD) {
     try {
         // Get port from .env or 3000
@@ -24,7 +26,6 @@ if (import.meta.env.PROD) {
                 }
             }
         })
-
         application.listen({ port: PORT , host: '0.0.0.0' })
         console.log(`Server started on 0.0.0.0:${PORT}`)
     } catch (err) {
