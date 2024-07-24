@@ -1,4 +1,4 @@
-const DB = require('./DB')
+// const DB = require('./DB')
 const { DBConfig } = require('./config/config')
 
 class DBManager {

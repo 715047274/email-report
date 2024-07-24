@@ -25,13 +25,11 @@ export default (FastifyServerOptions) => {
     /* Your code here. Hello world example: */
     app.ready().then(() => {
         app.log.info('App is ready')
-        const dbManager = DBManager.initDB(require('./db/config/config'))
+        const dbManager = DBManager.initDB(require('./db/config/config')).getClientDbConfig(userId).upgrade()
     })
 
 
     app.get('/', async (request, reply) => {
-        // app.log.info("-----------")
-        // app.log.info(__filename)
         return { hello: 'world' }
     })
 
