@@ -42,11 +42,12 @@ export default (FastifyServerOptions) => {
     /* Your code here. Hello world example: */
     app.ready().then(() => {
         app.log.info('App is ready')
-        umzug.up()
+
        //  const dbManager = DBManager.initDB(require('./db/config/config')).getClientDbConfig(userId).upgrade()
     })
     app.addHook('onReady', async function () {
         // [2]
+        umzug.up()
         app.log.info("this is on Ready called ")
     })
 
